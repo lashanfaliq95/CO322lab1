@@ -10,6 +10,9 @@ for i in range(length):
 
 def bubblesort(num_array):
     length=len(num_array)
+    if(length==0):
+        return ("error empty array")
+
     length1 = length
 
     for i in range(length):#to keep getting the largest and putting it to the right corner
@@ -31,12 +34,19 @@ def bubblesort(num_array):
 print(bubblesort([]))
 import unittest
 class TestBubbleSort(unittest.TestCase):
-    def test_when_null(self):
-        self.assertEquals(bubblesort([]),[])
-    def test_only_twoelements(self):
+    def test_whenNull(self):
+        self.assertEquals(bubblesort([]),"error empty array")
+    def test_oneElement(self):
+        self.assertEquals(bubblesort([5]),[5])
+    def test_onlyTwoElements(self):
         self.assertEquals(bubblesort([5,4]),[4,5])
-    def test_same_element(self):
+    def test_equalElement(self):
         self.assertEquals(bubblesort([1,1,1]),[1,1,1])
+    def test_allZeros(self):
+        self.assertEquals(bubblesort([0,0,0]),[0,0,0])
+    def test_threeElements(self):
+        self.assertEquals(bubblesort([3,1,9]),[1,3,9])
+
 
 if __name__ == '__main__':
     unittest.main()
