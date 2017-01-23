@@ -41,11 +41,13 @@ class TestBubbleSort(unittest.TestCase):
     def test_onlyTwoElements(self):
         self.assertEquals(bubblesort([5,4]),[4,5])
     def test_equalElement(self):
-        self.assertEquals(bubblesort([1,1,1]),[1,1,1])
+        self.assertEquals(bubblesort([1,2,1]),[1,1,2])
     def test_allZeros(self):
         self.assertEquals(bubblesort([0,0,0]),[0,0,0])
     def test_threeElements(self):
         self.assertEquals(bubblesort([3,1,9]),[1,3,9])
+    def test_negativeElements(self):
+        self.assertEquals(bubblesort([1,-1,5]),[-1,1,5])
 
 
 if __name__ == '__main__':
