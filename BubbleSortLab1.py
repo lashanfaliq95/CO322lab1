@@ -35,6 +35,8 @@ class TestBubbleSort(unittest.TestCase):
         self.assertEquals(bubblesort([]),[])
     def test_only_twoelements(self):
         self.assertEquals(bubblesort([5,4]),[4,5])
+    def test_same_element(self):
+        self.assertEquals(bubblesort([1,1,1]),[1,1,1])
 
 if __name__ == '__main__':
     unittest.main()
