@@ -38,7 +38,7 @@ class TestBubbleSort(unittest.TestCase):
         self.assertEquals(bubblesort([]),"error empty array")
     def test_oneElement(self):
         self.assertEquals(bubblesort([5]),[5])
-    def test_onlyTwoElements(self):
+    def test_TwoElements(self):
         self.assertEquals(bubblesort([5,4]),[4,5])
     def test_equalElement(self):
         self.assertEquals(bubblesort([1,2,1]),[1,1,2])
@@ -48,6 +48,8 @@ class TestBubbleSort(unittest.TestCase):
         self.assertEquals(bubblesort([3,1,9]),[1,3,9])
     def test_negativeElements(self):
         self.assertEquals(bubblesort([1,-1,5]),[-1,1,5])
+    def test_varitaionarray(self):
+        self.assertEquals(bubblesort([90000,0.0089,-100000,800000,60,-5,0.1]),[-100000,-5,0.0089,0.1,60,90000,800000])
 
 
 if __name__ == '__main__':
