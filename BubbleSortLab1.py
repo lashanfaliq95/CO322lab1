@@ -31,7 +31,7 @@ def bubblesort(num_array):
     return(num_array)
 
 
-print(bubblesort([]))
+
 import unittest
 class TestBubbleSort(unittest.TestCase):
     def test_whenNull(self):
