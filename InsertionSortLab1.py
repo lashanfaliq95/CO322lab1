@@ -5,6 +5,9 @@ print("Enter the elements in the array")
 for i in range(length):
     n=input("num: ")
     num_array.append(int(n))"""
+
+
+
 def insertionSort(num_array):
     length=len(num_array)
     if length==0:
